@@ -12,7 +12,7 @@ public interface UserAddressTypeService{
     UserAddressTypeResponseDto create(UserAddressTypeRequestDto userAddressTypeRequestDto) throws Exception;
     List<UserAddressTypeResponseDto> getAll();
 
-    String deleteById(UUID id);
+    UserAddressTypeResponseDto deleteById (UUID id);
 }
 
 

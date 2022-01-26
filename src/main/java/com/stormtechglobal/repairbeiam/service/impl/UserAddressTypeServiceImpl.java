@@ -47,7 +47,7 @@ public class UserAddressTypeServiceImpl implements UserAddressTypeService {
     }
 
     @Override
-    public String deleteById(UUID id) {
+    public UserAddressTypeResponseDto deleteById(UUID id) {
         Optional<UserAddressType> userAddressType=repository.findById(id);
         userAddressType.stream().map(
            userAddressType1 -> UserAddressType.builder().id(userAddressType1.getId()).name(userAddressType1.getName())

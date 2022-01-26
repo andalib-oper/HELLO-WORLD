@@ -2,7 +2,6 @@ package com.stormtechglobal.repairbeiam.controller;
 
 import com.stormtechglobal.repairbeiam.dto.UserAddressTypeRequestDto;
 import com.stormtechglobal.repairbeiam.dto.UserAddressTypeResponseDto;
-import com.stormtechglobal.repairbeiam.entity.UserAddressType;
 import com.stormtechglobal.repairbeiam.service.UserAddressTypeService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -47,8 +46,8 @@ public class UserAddressTypeController {
         return service.getAll();
     }
 
-    @DeleteMapping(value="/useraddresstype/{id}")
-    public String deleteUserAddressType(@PathVariable("id") UUID id) {
+    @DeleteMapping(value="Delete user address by id")
+    public UserAddressTypeResponseDto deleteUserAddressType(@PathVariable("id") UUID id) {
         return service.deleteById(id);
     }
 
